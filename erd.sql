@@ -11,17 +11,17 @@ dept_id Varchar fk >- d.dept_id
 Department_Manager
 -
 dept_id Varchar fk >- d.dept_id
-emp_id int fk 0- e.emp_id
+emp_id int fk - e.emp_id
 
 Employees as e 
 -
 emp_id int PK 
 emp_title_id varchar FK >- jt.emp_title_id
-birthdate date 
+birthdate varchar 
 first_name varchar(25)
 last_name varchar(25)
 sex Char(2) 
-hire_date date 
+hire_date varchar 
 
 Salary
 - 

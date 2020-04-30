@@ -58,3 +58,47 @@ e.emp_id = s.emp_id;
 SELECT first_name, last_name, hire_date
 FROM employees 
 WHERE hire_date like '%86';
+
+-- 3. List the manager of each department with the 
+-- following information: department number, 
+-- department name, the manager's employee number, 
+-- last name, first name.
+
+SELECT dm.dept_id, d.dept_name, dm.emp_id as manager_emp_id, e.first_name as manager_first_name, e.last_name as manager_last_name
+FROM department_manager as dm
+INNER JOIN employees as e
+ON e.emp_ID = dm.emp_id
+INNER JOIN departments as d
+ON dm.dept_id = d.dept_id
+;
+
+-- 4. List the department of each employee with 
+-- the following information: employee number, 
+-- last name, first name, and department name.
+
+SELECT e.emp_id, e.first_name, e.last_name, d.dept_name
+FROM employees as e
+INNER JOIN department_employees as de
+ON de.emp_id = e.emp_id
+INNER JOIN departments as d
+ON d.dept_id = de.dept_id;
+
+-- 5. List first name, last name, and sex for 
+-- employees whose first name is "Hercules" and 
+-- last names begin with "B."
+
+SELECT first_name, last_name, sex 
+FROM employees
+WHERE first_name = 'Hercules' and last_name like 'B%';
+
+-- 6. List all employees in the Sales department, 
+-- including their employee number, last name, 
+-- first name, and department name.
+
+Select e.emp_id, e.first_name, e.last_name, d.dept_name
+FROM employees as e
+INNER JOIN department_employees as de
+ON de.emp_id=e.emp_id
+INNER JOIN departments as d
+ON d.dept_id = de.dept_id
+WHERE d.dept_name = 'Sales';
