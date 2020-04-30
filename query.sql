@@ -95,6 +95,8 @@ WHERE first_name = 'Hercules' and last_name like 'B%';
 -- including their employee number, last name, 
 -- first name, and department name.
 
+----- Can we use subqueries for this?
+
 Select e.emp_id, e.first_name, e.last_name, d.dept_name
 FROM employees as e
 INNER JOIN department_employees as de
@@ -102,3 +104,25 @@ ON de.emp_id=e.emp_id
 INNER JOIN departments as d
 ON d.dept_id = de.dept_id
 WHERE d.dept_name = 'Sales';
+
+-- 7. List all employees in the Sales and 
+-- Development departments, including their employee 
+-- number, last name, first name, and department name.
+
+Select e.emp_id, e.first_name, e.last_name, d.dept_name
+FROM employees as e
+INNER JOIN department_employees as de
+ON de.emp_id=e.emp_id
+INNER JOIN departments as d
+ON d.dept_id = de.dept_id
+WHERE d.dept_name = 'Sales' or d.dept_name = 'Development';
+
+-- 8. In descending order, list the frequency count of 
+-- employee last names, i.e., how many employees share 
+-- each last name.
+
+SELECT last_name, count(last_name) 
+FROM employees
+GROUP BY last_name
+ORDER BY count DESC;
+ 
