@@ -1,3 +1,6 @@
+-- Code from quickdatabasediagrams.com used to visually build the database structure.
+-- This code is not to be implemented in pgAdmin4.
+
 Departments as d 
 -
 dept_id Varchar(4) PK  
