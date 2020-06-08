@@ -1,7 +1,7 @@
 # SQL_challenge
 
 ## What is stored in this repository? 
-This repo holds a project where I conducted both Data Engineering/Data Modeling and Data Analysis. I was given six csv files located in Data/ which contained information about a company and their employees. My job was to create the relational database in pgAdmin4, store the data in said database, query the data for analysis using PostgreSQL, and then continue analysis using Jupyter notebooks, Python, Pandas, Matplotlib, and SQLAlchemy, 
+This repo holds a project where I conducted both Data Engineering/Data Modeling and Data Analysis. I was given six csv files located in Data/ which contained information about a company and their employees. My job was to create the relational database in pgAdmin4, store the data in said database, query the data for analysis using PostgreSQL, and continue analyses using Jupyter notebooks, Python, Pandas, Matplotlib, and SQLAlchemy, 
 
 
 ## How to run the code:
@@ -22,4 +22,14 @@ This repo holds a project where I conducted both Data Engineering/Data Modeling 
 ## The Database Structure:
 ![Database Structure](schema.png "Database Structure")
 
-### 
+## An example table in pgAdmin: 
+![Employee Table](Assets/table.png "Employee Table")
+
+## An example PostgreSQL query: 
+![Query](Assets/query.png "Query")
+
+## An example of a SQLAlchemy query and Pandas merging
+![SQLAlchemy and Pandas](Assets/jnquery.png "SQLAlchemy and Pandas")
+
+## Matplotlib Visualization
+![plt Viz](Assets/jnviz.png "plt Viz")
